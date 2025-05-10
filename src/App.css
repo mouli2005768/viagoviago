@@ -1,0 +1,251 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background: url("back.jpg") no-repeat center center/cover;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-position: center 30%;
+  border-radius: 5%;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+
+}
+
+.header-login-register {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 20px;
+  min-height: 70vh;
+  position: relative;
+}
+
+/* Hide the headings when popup is open */
+.main-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: opacity 0.5s ease;
+}
+
+.popup-show + .main-heading {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Popup inside the content */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Popup Inputs */
+.popup-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-btn {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup-btn:hover {
+  background: #555;
+}
+
+.switch-popup {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.switch-popup span {
+  color: blue;
+  text-decoration: underline;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.popup-btn {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-btn:hover {
+  background: #555;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: blue;
+  cursor: pointer;
+}
+
+.switch-popup {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.switch-popup span {
+  color: blue;
+  text-decoration: underline;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.gender {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-right {
+  position: absolute;
+  right: 20px;
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  display: flex;
+  gap: 30px;
+}
+
+.login, .register {
+  color: rgb(246, 242, 246);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login:hover, .register:hover {
+  color: rgb(156, 151, 162);
+  text-decoration: underline;
+}

@@ -1,0 +1,328 @@
+.ride-pool-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.ride-pool-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+    padding-top: 20px;
+}
+
+.ride-pool-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    -webkit-text-fill-color: transparent;
+}
+
+.ride-pool-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 0 3px rgba(33, 147, 176, 0.2);
+    outline: none;
+}
+
+.calculate-button {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.calculate-button:hover {
+    transform: translateY(-2px);
+}
+
+.map-container {
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 400px;
+}
+
+.ride-details {
+    margin: 30px 0;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.detail-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.detail-card p {
+    margin: 10px 0;
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+.share-button {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.share-button:hover {
+    transform: translateY(-2px);
+}
+
+.available-rides {
+    margin-top: 40px;
+}
+
+.available-rides h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.ride-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ride-card:hover {
+    transform: translateY(-5px);
+}
+
+.ride-info {
+    margin-bottom: 15px;
+}
+
+.ride-info p {
+    margin: 8px 0;
+    color: #34495e;
+}
+
+.join-button {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.join-button:hover {
+    transform: translateY(-2px);
+}
+
+.gender-selection {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+.gender-selection h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.gender-option:hover {
+    background: #f0f0f0;
+}
+
+.gender-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+/* Animation for new rides */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ride-card {
+    animation: slideIn 0.5s ease-out;
+}
+
+
+/* Add animation for map markers */
+
+@keyframes markerPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.map-container img[src*="ms/icons"] {
+    animation: markerPulse 2s infinite;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .ride-pool-container {
+        padding: 15px;
+    }
+    .ride-pool-form {
+        padding: 20px;
+    }
+    .rides-grid {
+        grid-template-columns: 1fr;
+    }
+    .gender-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .gender-option {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-size: 1.2em;
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.loading::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #2193b0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(33, 147, 176, 0.9);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.back-button:hover {
+    background: rgba(33, 147, 176, 1);
+    transform: translateY(-50%) translateX(-5px);
+}
+
+.back-button svg {
+    font-size: 18px;
+}

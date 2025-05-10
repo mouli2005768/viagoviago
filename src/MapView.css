@@ -1,0 +1,42 @@
+/* MapView.css */
+.map-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* MapView.css */
+.map-container {
+  width: 100%;
+  height: 500px; /* Make sure the map container has a valid height */
+}
+
+
+.vehicle-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.vehicle-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.vehicle-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.vehicle-info {
+  text-align: center;
+}
